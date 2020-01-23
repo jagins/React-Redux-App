@@ -1,6 +1,4 @@
 //Reducers file for our app
-import axios from 'axios';
-
 const initalState = {
     isLoading: false,
     cats: [],
