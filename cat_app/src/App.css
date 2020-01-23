@@ -1,3 +1,27 @@
 .App {
   text-align: center;
 }
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+
+.cat-img
+{
+  margin-top: 2%;
+  width: 25%;
+  height: auto;
+}
+
+.button
+{
+  margin-top: 2%;
+}
+
+.App h1,
+.App h3
+{
+  margin-top: 2%;
+}

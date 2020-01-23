@@ -19,9 +19,9 @@ function App(props) {
       {!cats && !isLoading && <h3>Let's fill the page with cats!! Press the button below</h3>}
      
       {!isLoading ?
-        <Button onClick={() => getCats()} variant='primary'>Let's load some cats</Button>
+        <Button className='button' onClick={() => getCats()} variant='primary'>Let's load some cats</Button>
         :
-        <Button variant='primary' disabled>Loading Cats
+        <Button className='button' variant='primary' disabled>Loading Cats
           <Spinner
             as="span"
             animation="grow"
@@ -31,8 +31,10 @@ function App(props) {
           />
         </Button>
       }
-
-      {cats && !isLoading && cats.map(cat => <Cats key={cat.id} catPic={cat.url}/>)}
+        {cats && !isLoading &&(
+          <div className='container'>
+            {cats.map(cat => <Cats key={cat.id} catPic={cat.url}/>)}
+          </div>)}
     </div>
   );
 }
