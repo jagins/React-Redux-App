@@ -4,8 +4,10 @@ import './App.css';
 import {connect} from 'react-redux';
 import {getCats} from './actions';
 
-function App() 
+function App(props) 
 {
+  const {isloading, cats, error} = props;
+  
   return (
     <div className="App">
      <h1>Welcome to the Cat App</h1>
