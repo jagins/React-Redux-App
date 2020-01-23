@@ -1,7 +1,7 @@
 //Reducers file for our app
 const initalState = {
     isLoading: false,
-    cats: '',
+    cats: null,
     error: ''
 };
 
@@ -18,7 +18,7 @@ export const reducer = (state = initalState, action) =>
             return {
                 ...state,
                 isLoading: false,
-                cats: [...state.cats, action.payload]
+                cats: action.payload
             }
         case 'FAILURE':
             return {
